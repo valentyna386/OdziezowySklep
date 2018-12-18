@@ -1,0 +1,19 @@
+
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
+
+    <persistence-unit name="QuickStart">
+        <class>pl.sklepOdziezowy.Rabat</class>
+        <class>pl.sklepOdziezowy.Rozmiar</class>
+        <class>pl.sklepOdziezowy.Kolor</class>
+        <class>pl.sklepOdziezowy.Uzytkownik</class>
+        <class>pl.sklepOdziezowy.Towar</class>
+        <class>pl.sklepOdziezowy.Typ</class>
+        <class>pl.sklepOdziezowy.Marka</class>
+        <class>pl.sklepOdziezowy.Kategoria</class>
+        <class>pl.sklepOdziezowy.Zamowienie</class>
+    </persistence-unit>
+</persistence>
