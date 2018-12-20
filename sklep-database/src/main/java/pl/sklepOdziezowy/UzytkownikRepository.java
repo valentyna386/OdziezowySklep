@@ -2,5 +2,5 @@ package pl.sklepOdziezowy;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface MarkaRepository extends JpaRepository<Marka, Long> {
+public interface UzytkownikRepository extends JpaRepository<Uzytkownik, Long> {
 }

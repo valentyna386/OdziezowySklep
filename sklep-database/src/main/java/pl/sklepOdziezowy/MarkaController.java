@@ -1,16 +1,22 @@
 package pl.sklepOdziezowy;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.concurrent.atomic.AtomicLong;
+import java.util.List;
 
 @RestController
 public class MarkaController {
-    private static final String template = "Hello, %s!";
-    private final AtomicLong counter = new AtomicLong();
-    @RequestMapping("/")
-    public Marka pobierzWszystkieMarki() {
-        return new Marka();
+    @Autowired
+    MarkaRepository markaRepository;
+
+    @RequestMapping(value = "/marka/{id}",method = RequestMethod.GET)
+    public Marka getById(@PathVariable long id){
+        return markaRepository.getOne(id);
+    }
+    @RequestMapping(value = "/marka/",method = RequestMethod.GET)
+    public List<Marka> getAll(){
+        return markaRepository.findAll();
     }
 }
+
