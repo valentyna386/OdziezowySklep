@@ -9,10 +9,10 @@ class Zamowienie {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "idzamowienia")
     private Long id;
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "idtowaru")
     private Towar towar;
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "iduzytkownika")
     private Uzytkownik uzytkownik;
 

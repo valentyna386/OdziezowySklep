@@ -1,12 +1,11 @@
 package pl.sklepOdziezowy;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 
@@ -14,9 +13,9 @@ public class UzytkownikController {
     @Autowired
     UzytkownikRepository uzytkownikRepository;
 
-    @RequestMapping(value = "/uzytkownik/{id}",method = RequestMethod.GET)
-    public Uzytkownik getById(@PathVariable long id){
-        return uzytkownikRepository.getOne(id);
+    @RequestMapping(value = "/uzytkownik/{id}",method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public Optional<Uzytkownik> getById(@RequestParam(value = "id") long id){
+        return uzytkownikRepository.findById(id);
     }
     @RequestMapping(value = "/uzytkownik/",method = RequestMethod.GET)
     public List<Uzytkownik> getAll(){

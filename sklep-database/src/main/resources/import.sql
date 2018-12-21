@@ -22,7 +22,7 @@ insert into rozmiary (idrozmiaru,nazwa) values (3,'M');
 delete from towary;
 insert into towary (idtowaru,ilosc,nazwa,idkategorii,idkoloru,idmarki,idrabatu,idrozmiaru,idtypu) values (1,5,'Super',1,2,3,1,2,3);
 insert into towary (idtowaru,ilosc,nazwa,idkategorii,idkoloru,idmarki,idrabatu,idrozmiaru,idtypu) values (2,3,'Cośtam',1,1,1,2,2,2);
-insert into towary (idtowaru,ilosc,nazwa,idkategorii,idkoloru,idmarki,idrabatu,idrozmiaru,idtypu) values (3,60,'Qweasd',3,2,2,4,1,1);
+insert into towary (idtowaru,ilosc,nazwa,idkategorii,idkoloru,idmarki,idrabatu,idrozmiaru,idtypu) values (3,60,'Qweasd',3,2,2,3,1,1);
 delete from typy;
 insert into typy (idtypu,nazwa) values (1,'Slim');
 insert into typy (idtypu,nazwa) values (2,'Regular');
