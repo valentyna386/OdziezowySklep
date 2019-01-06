@@ -16,7 +16,7 @@ public class RozmiarController {
     public Optional<Rozmiar> getById(@RequestParam(value = "id") long id){
         return rozmiarRepository.findById(id);
     }
-    @RequestMapping(value = "/rozmiar/",method = RequestMethod.GET)
+    @RequestMapping(value = "/rozmiar",method = RequestMethod.GET)
     public List<Rozmiar> getAll(){
         return rozmiarRepository.findAll();
     }

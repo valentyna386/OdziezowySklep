@@ -16,7 +16,7 @@ public class KategoriaController {
     public Optional<Kategoria> getById(@RequestParam(value = "id") long id){
         return kategoriaRepository.findById(id);
     }
-    @RequestMapping(value = "/kategoria/",method = RequestMethod.GET)
+    @RequestMapping(value = "/kategoria",method = RequestMethod.GET)
     public List<Kategoria> getAll(){
         return kategoriaRepository.findAll();
     }

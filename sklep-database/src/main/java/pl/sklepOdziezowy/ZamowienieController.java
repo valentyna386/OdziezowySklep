@@ -16,7 +16,7 @@ public class ZamowienieController {
     public Optional<Zamowienie> getById(@RequestParam(value = "id") long id){
         return zamowienieRepository.findById(id);
     }
-    @RequestMapping(value = "/zamowienie/",method = RequestMethod.GET)
+    @RequestMapping(value = "/zamowienie",method = RequestMethod.GET)
     public List<Zamowienie> getAll(){
         return zamowienieRepository.findAll();
     }

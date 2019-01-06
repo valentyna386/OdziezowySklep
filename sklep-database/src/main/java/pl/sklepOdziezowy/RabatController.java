@@ -16,7 +16,7 @@ public class RabatController {
     public Optional<Rabat> getById(@RequestParam(value = "id") long id){
         return rabatRepository.findById(id);
     }
-    @RequestMapping(value = "/rabat/",method = RequestMethod.GET)
+    @RequestMapping(value = "/rabat",method = RequestMethod.GET)
     public List<Rabat> getAll(){
         return rabatRepository.findAll();
     }

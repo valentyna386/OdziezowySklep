@@ -17,7 +17,7 @@ public class UzytkownikController {
     public Optional<Uzytkownik> getById(@RequestParam(value = "id") long id){
         return uzytkownikRepository.findById(id);
     }
-    @RequestMapping(value = "/uzytkownik/",method = RequestMethod.GET)
+    @RequestMapping(value = "/uzytkownik",method = RequestMethod.GET)
     public List<Uzytkownik> getAll(){
         return uzytkownikRepository.findAll();
     }

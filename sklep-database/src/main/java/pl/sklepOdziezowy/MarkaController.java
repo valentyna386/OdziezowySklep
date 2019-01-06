@@ -16,7 +16,7 @@ public class MarkaController {
     public Optional<Marka> getById(@RequestParam(value = "id") long id){
         return markaRepository.findById(id);
     }
-    @RequestMapping(value = "/marka/",method = RequestMethod.GET)
+    @RequestMapping(value = "/marka",method = RequestMethod.GET)
     public List<Marka> getAll(){
         return markaRepository.findAll();
     }

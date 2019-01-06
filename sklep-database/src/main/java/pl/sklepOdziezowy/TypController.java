@@ -16,7 +16,7 @@ public class TypController {
     public Optional<Typ> getById(@RequestParam(value = "id") long id){
         return typRepository.findById(id);
     }
-    @RequestMapping(value = "/typ/",method = RequestMethod.GET)
+    @RequestMapping(value = "/typ",method = RequestMethod.GET)
     public List<Typ> getAll(){
         return typRepository.findAll();
     }

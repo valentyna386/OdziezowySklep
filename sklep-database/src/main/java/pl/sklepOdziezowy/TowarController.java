@@ -16,7 +16,7 @@ public class TowarController {
     public Optional<Towar> getById(@RequestParam(value = "id") long id){
         return towarRepository.findById(id);
     }
-    @RequestMapping(value = "/towar/",method = RequestMethod.GET)
+    @RequestMapping(value = "/towar",method = RequestMethod.GET)
     public List<Towar> getAll(){
         return towarRepository.findAll();
     }

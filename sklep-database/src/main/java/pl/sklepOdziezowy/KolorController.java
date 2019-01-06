@@ -16,7 +16,8 @@ public class KolorController {
     public Optional<Kolor> getById(@RequestParam(value = "id") long id){
         return kolorRepository.findById(id);
     }
-    @RequestMapping(value = "/kolor/",method = RequestMethod.GET)
+    @RequestMapping(value = "/kolor" +
+            "",method = RequestMethod.GET)
     public List<Kolor> getAll(){
         return kolorRepository.findAll();
     }
