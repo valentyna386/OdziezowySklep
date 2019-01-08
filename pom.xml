@@ -10,6 +10,7 @@
   <modules>
     <module>sklep-web</module>
     <module>sklep-database</module>
+    <module>sklep-config</module>
   </modules>
   <packaging>pom</packaging>
 

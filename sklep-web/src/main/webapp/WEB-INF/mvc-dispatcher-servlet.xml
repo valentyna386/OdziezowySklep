@@ -22,7 +22,7 @@
     <tx:annotation-driven transaction-manager="transactionManager"/>
 
     <context:annotation-config/>
-
+    <context:property-placeholder properties-ref="dbProperties"/>
     <jpa:repositories base-package="pl.sklepOdziezowy"/>
 
     <mvc:annotation-driven/>
@@ -44,18 +44,19 @@
         <property name="entityManagerFactory" ref="entityManagerFactory"/>
     </bean>
 
+    <bean class="org.springframework.beans.factory.config.PropertiesFactoryBean" id="dbProperties">
+        <property name="locations" value="classpath:db.properties"/>
+    </bean>
     <bean id="jpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
         <property name="showSql" value="true"/>
-        <property name="database" value="MYSQL"/>
-        <property name="databasePlatform" value="org.hibernate.dialect.MySQL5Dialect"/>
+        <property name="database" value="${db.dataBase}" />
+        <property name="databasePlatform" value="${db.dataBasePlatform}" />
     </bean>
-
-
     <bean id="myDataSourceBean" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="driverClassName" value="${db.driver}" />
         <property name="url" value="jdbc:mysql://localhost:3306/sklepodziezowy?serverTimezone=UTC&amp;verifyServerCertificate=FALSE&amp;useSSL=FALSE" />
-        <property name="username" value="root" />
-        <property name="password" value="password" />
+        <property name="username" value="${db.userName}" />
+        <property name="password" value="${db.passwd}" />
     </bean>
 
 </beans>
